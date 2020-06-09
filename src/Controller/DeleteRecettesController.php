@@ -23,6 +23,6 @@ class DeleteRecettesController extends AbstractController
         $manager->remove($recette);
         $manager->flush();
 
-        return new JsonResponse(['message' => 'Recette supprimé'], Response::HTTP_NO_CONTENT);
+        return new JsonResponse(['message' => 'Recette supprimé'], Response::HTTP_OK);
     }
 }

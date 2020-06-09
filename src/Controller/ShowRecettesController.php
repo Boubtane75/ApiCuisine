@@ -30,7 +30,7 @@ class ShowRecettesController extends AbstractController
 
         $data = $serializer->normalize($recettes, null, [AbstractNormalizer::ATTRIBUTES => ['Titre','sousTitre', 'ingredients' => ['name']]]);
 
-        $response = new JsonResponse($data, 200);
+        $response = new JsonResponse(['recettes' => $data], 200);
 
         return $response;
 
